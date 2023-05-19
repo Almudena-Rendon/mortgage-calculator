@@ -1,5 +1,5 @@
 
-Inorder to setup the project we need to install react, material-ui & other necessary packages. First create a folder named mortgage-calculator and then run the following command in the terminal
+In order to setup the project we need to install react, material-ui & other necessary packages. First create a folder named mortgage-calculator and then run the following command in the terminal
 
 npx create-react-app .
 npm install @mui/material @emotion/react @emotion/styled
