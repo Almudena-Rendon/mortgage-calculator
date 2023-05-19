@@ -1,6 +1,8 @@
 
-View the live demo here  👉 https://mortgage-calculator-alpha.vercel.app/
+View the live demo  
+👉https://mortgage-calculator-alpha.vercel.app/
 
+************************************************
 
 In order to setup the project we need to install react, material-ui & other necessary packages. First create a folder named mortgage-calculator and then run the following command in the terminal
 
