@@ -3,132 +3,60 @@
 View the live demo  
 👉https://mortgage-calculator-alpha.vercel.app/
 
-************************************************
+Getting Started with Create React App
+This project was bootstrapped with Create React App.
 
-In order to setup the project we need to install react, material-ui & other necessary packages. First create a folder named mortgage-calculator and then run the following command in the terminal
+Available Scripts
+In the project directory, you can run:
 
-npx create-react-app .
-npm install @mui/material @emotion/react @emotion/styled
-npm install --save chart.js react-chartjs-2
-MUI Theme
+npm start
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in your browser.
 
-We will be using the dark theme of material UI. For that we need to create a file named theme.js in the src folder and add the following code
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
-theme.js
-import { createTheme } from '@mui/material/styles';
+npm test
+Launches the test runner in the interactive watch mode.
+See the section about running tests for more information.
 
-export const theme = createTheme({
-  palette: {
-    mode: 'dark',
-  },
-})
-index.js
+npm run build
+Builds the app for production to the build folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Next up, we need to import the theme in the index.js file and wrap the app with the theme provider. follow along 👇
+The build is minified and the filenames include the hashes.
+Your app is ready to be deployed!
 
-import { ThemeProvider } from "@mui/material/styles";
-import CssBaseline from "@mui/material/CssBaseline";
-import { theme } from "./theme";
+See the section about deployment for more information.
 
-<React.StrictMode>
-  <ThemeProvider theme={theme}>
-    <App />
-    <CssBaseline />
-  </ThemeProvider>
-</React.StrictMode>
-Note: If you don't pass the CssBaseline component we will not be able to see the MUI dark theme.
+npm run eject
+Note: this is a one-way operation. Once you eject, you can't go back!
 
-Navbar
-Next up, we will be creating a very simple Navbar to show the Logo. For that we need to create a file named Navbar.js in the src/Components folder and add the following code
+If you aren't satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
 
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { Container } from "@mui/system";
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-const Navbar = () => {
-  return (
-    <AppBar position="static">
-      <Container maxWidth='xl'>
-        <Toolbar>
-          <Typography variant="h5">
-            Bank of React
-          </Typography>
-        </Toolbar>
-      </Container>
-    </AppBar>
-  );
-};
+You don't have to ever use eject. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-export default Navbar;
-Slider Component
-next up, we will be creating a slider component to get the input amount from the user. It will look something like this 👇
+Learn More
+You can learn more in the Create React App documentation.
 
-Slider Component
-For that we need to create a file named SliderComponent.js in the src/Components/Common folder. First lets list out all the props we need to pass to our re-usable slider component
+To learn React, check out the React documentation.
 
-onChange,
+Code Splitting
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-label - The label of the slider
-min - The minimum value of the slider
-max - The maximum value of the slider
-defaultValue - The default value of the slider
-unit - The unit of the slider
-value - The value of the slider
-steps - The number of steps of the slider
-amount - The amount range of the slider
-onChange - The onChange function of the slider
-lets get going, first of all, import the following components from MUI
+Analyzing the Bundle Size
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-import React from "react";
-import Slider from "@mui/material/Slider";
-import { Typography } from "@mui/material";
-import { Stack } from "@mui/system";
-We will be using the Stack component from MUI to stack the components vertically. my is the shorthand for marginY [margin-top & margin-bottom]. We will be using the Typography component from MUI to display the label, unit and other datas. We will be using the Slider component from MUI to display the slider.
+Making a Progressive Web App
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-write these small amounts of code first with our props destructured.
+Advanced Configuration
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-const SliderComponent = ({
-  defaultValue,
-  min,
-  max,
-  label,
-  unit,
-  onChange,
-  amount,
-  value,
-  steps
-}) => {
-  return (
-    <Stack my={1.4}>
+Deployment
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-    </Stack>
-  )
-}
-
-export default SliderComponent
-<Stack gap={1}>
-  <Typography variant="subtitle2">{label}</Typography>
-  <Typography variant="h5">
-    {unit} {amount}
-  </Typography>
-</Stack>
-<Slider
-  min={min}
-  max={max}
-  defaultValue={defaultValue}
-  aria-label="Default"
-  valueLabelDisplay="auto"
-  onChange={onChange}
-  value={value}
-  marks
-  step={steps}
-/>
-<Stack direction="row" justifyContent="space-between">
-  <Typography variant="caption" color="text.secondary">
-    {unit} {min}
-  </Typography>
-  <Typography variant="caption" color="text.secondary">
-    {unit} {max}
-  </Typography>
-</Stack>
+npm run build fails to minify
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
