@@ -1,3 +1,4 @@
+![image](https://github.com/Almudena-Rendon/mortgage-calculator/assets/126793941/046ef4db-21b2-4524-9b06-584ed35c5a5b)
 
 View the live demo  
 👉https://mortgage-calculator-alpha.vercel.app/
